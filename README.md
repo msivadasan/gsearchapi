@@ -10,7 +10,8 @@ Instructions for creating programmable search engine and getting search engine i
 https://developers.google.com/custom-search/v1/overview
 
 ### A sample search
-The module mgsearch has two functions
+
+The package has two modules, mgsearch and searchprop.
 
 First, initialize using search engine ID and API key:
 x0=mgsearch.seid_apikey("YOUR_SEARCH_ENGINE_ID", "YOUR_API_KEY")
