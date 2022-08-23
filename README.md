@@ -14,6 +14,7 @@ https://developers.google.com/custom-search/v1/overview
 The module mgsearch has two functions
 
 First, initialize using search engine ID and API key:
+
 x0=mgsearch.seid_apikey("YOUR_SEARCH_ENGINE_ID", "YOUR_API_KEY")
 
 Now, we can search using a keyword
