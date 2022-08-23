@@ -7,14 +7,12 @@ https://www.thepythoncode.com/article/use-google-custom-search-engine-api-in-pyt
 ## Inputs required
 
 Instructions for creating programmable search engine and getting search engine id, and then obtaining the API key are available here:
-
 https://developers.google.com/custom-search/v1/overview
 
 ### A sample search
 The module mgsearch has two functions
 
 First, initialize using search engine ID and API key:
-
 x0=mgsearch.seid_apikey("YOUR_SEARCH_ENGINE_ID", "YOUR_API_KEY")
 
 Now, we can search using a keyword
