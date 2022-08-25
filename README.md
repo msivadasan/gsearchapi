@@ -16,7 +16,7 @@ The package has two modules, mgsearch and searchprop.
 First, initialize using search engine ID and API key:  
 * x0=mgsearch.seid_apikey("YOUR_SEARCH_ENGINE_ID", "YOUR_API_KEY")
 
-Now, we can search using a keyword
+Now, we can search using a keyword:
 * x1=x0.searchdata('YOUR_KEYWORD', PAGE_NUM)  
 PAGE_NUM indicates which page of the search results is needed. The default is 1, which yields the first 10 search results. Changing to N will give the 10 results from the Nth page, i.e. results 10(N-1)+1 to 10N. 
 
