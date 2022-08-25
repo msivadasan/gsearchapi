@@ -18,10 +18,11 @@ x0=mgsearch.seid_apikey("YOUR_SEARCH_ENGINE_ID", "YOUR_API_KEY")
 
 Now, we can search using a keyword
 * x1=x0.searchdata('YOUR_KEYWORD', PAGE_NUM)
+
 PAGE_NUM indicates which page of the search results is needed. The default is 1, which yields the first 10 search results. Changing to N will give the 10 results from the Nth page, i.e. results 10(N-1)+1 to 10N. 
 
 Here x1 is a dictionary object that contains all of the raw data (including metadata). The function result_dict in module "searchprop" allows users to extract variables from this raw data.
-x2=resultprop.result_dict(x1)
+* x2=resultprop.result_dict(x1)
 
 Now x2 has a number of useful attributes. Specifically:
 * x2.items--> Dictionary of length 10 with each element having all of the data on that search result. E.g. x1.items[0] is a dictionary of all of the data on the first result.
