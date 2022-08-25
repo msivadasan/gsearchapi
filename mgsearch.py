@@ -14,7 +14,7 @@ class seid_apikey():
     #print("This code requires both a search engine id and a api key")
     def __init__(self,apikey="missing",searchengid="missing"):
         if apikey=="missing" or searchengid=="missing":
-            print('\033[41m'+"Input Error:"+'\033[0m', "This code requires both a search engine id and an api key. Instructions for setting up search engine id and getting an API key is available here: https://developers.google.com/custom-search/v1/overview") 
+            print('\033[41m'+"Input Error:"+'\033[0m', "This code requires both a search engine id and an api key. Instructions for setting up search engine id and getting an API key are available here: https://developers.google.com/custom-search/v1/overview") 
         else:
             # 
             self._API_KEY_ =apikey # User can provide own API Key
