@@ -13,12 +13,12 @@ https://developers.google.com/custom-search/v1/overview
 
 The package has two modules, mgsearch and searchprop.
 
-First, initialize using search engine ID and API key:
-x0=mgsearch.seid_apikey("YOUR_SEARCH_ENGINE_ID", "YOUR_API_KEY")
+First, initialize using search engine ID and API key:  
+* x0=mgsearch.seid_apikey("YOUR_SEARCH_ENGINE_ID", "YOUR_API_KEY")
 
 Now, we can search using a keyword
-* x1=x0.searchdata('YOUR_KEYWORD', PAGE_NUM)
-  PAGE_NUM indicates which page of the search results is needed. The default is 1, which yields the first 10 search results. Changing to N will give the 10 results from the Nth page, i.e. results 10(N-1)+1 to 10N. 
+* x1=x0.searchdata('YOUR_KEYWORD', PAGE_NUM)  
+PAGE_NUM indicates which page of the search results is needed. The default is 1, which yields the first 10 search results. Changing to N will give the 10 results from the Nth page, i.e. results 10(N-1)+1 to 10N. 
 
 Here x1 is a dictionary object that contains all of the raw data (including metadata). The function result_dict in module "searchprop" allows users to extract variables from this raw data.
 * x2=resultprop.result_dict(x1)
@@ -33,10 +33,10 @@ Now x2 has a number of useful attributes. Specifically:
 
 ### Use of Cache
 
-To avoid repeated calls with the same keyword and page number, we use python's inbuilt caching functionality lru_cache, so that the function serachdata runs only for unique calls. To see cache info:
-print(x0.searchdata.cache_info())
+To avoid repeated calls with the same keyword and page number, we use python's inbuilt caching functionality lru_cache, so that the function serachdata runs only for unique calls. To see cache info:  
+* print(x0.searchdata.cache_info())
 
-To clear the cache:
-x0.searchdata.cache_clear()
+To clear the cache:  
+* x0.searchdata.cache_clear()
 
 
