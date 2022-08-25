@@ -34,7 +34,7 @@ Now x2 has a number of useful attributes. Specifically:
 
 ### Use of Cache
 
-To avoid repeated calls with the same keyword and page number, we use python's inbuilt caching functionality lru_cache. To see cache info:
+To avoid repeated calls with the same keyword and page number, we use python's inbuilt caching functionality lru_cache, so that the function serachdata runs only for unique calls. To see cache info:
 print(x0.searchdata.cache_info())
 
 To clear the cache:
