@@ -41,31 +41,29 @@ To clear the cache:
 * x0.searchdata.cache_clear()
 
 ### Sample implementation
+<pre><code>
+import mgsearch  
+import resultprop  
+import json  
 
-> import mgsearch  
-> import resultprop  
-> import json  
+x0=mgsearch.seid_apikey("YOUR_SEARCH_ENGINE_ID", "YOUR_API_KEY")  
 
-> x0=mgsearch.seid_apikey("YOUR_SEARCH_ENGINE_ID", "YOUR_API_KEY")  
-
-> #Initializing the datafile to store results  
-> with open('rfile.json', 'w') as f:  
+#Initializing the datafile to store results  
+with open('rfile.json', 'w') as f:  
     json.dump({}, f, indent=4)  
-> 
-> for aa in ("Huawei",  "Lucent", "ATT", "Intel"):  
->     x0.searchdata(aa,1, 'rfile.json')  
->     
-> #Load JSON file into dictionary  
-> with open('rfile.json') as f:  
->     xx=json.load(f)  
 
-> #Use resultprop module to get attributes of a search result  
-> y1=resultprop.result_dict(xx['ATT_1'])  
-> print(y1.long_desc)  
->   
-> """  
-> Prints long description for the first page's 10 results for ATT:  
-    
-> ['Shop deals on unlimited data plans, Internet service, and DIRECTV STREAM. Get 24/7 support, pay your bills & manage your account online.', 'Find the latest AT&T news, including information on new devices, network services, mobile phones and technology.', "Shop AT&T's selection of smartphones, accessories & mobile phone plans. Learn about our best phone deals and wireless plans or get support & pay your bill.", 'Browse available job openings at AT&T', 'Get reliable, fast, and safe Internet from AT&T. View Internet plans, prices and offers available in your area!', 'Find right solution for your business from AT&T. Offering the latest business phones, data plans, IoT, Internet and Networking. Login to AT&T Business and manage your business services.', 'N/A', 'N/A', 'Get the latest in news, entertainment, sports, weather and more on Currently.com. Sign up for free email service with AT&T Yahoo Mail.', 'We create connection – with each other, with what people need to thrive in their everyday lives and with the stories and experiences that matter.']  
-> 
-> """
+for aa in ("Huawei",  "Lucent", "ATT", "Intel"):  
+    x0.searchdata(aa,1, 'rfile.json')  
+     
+#Load JSON file into dictionary  
+with open('rfile.json') as f:  
+    xx=json.load(f)  
+
+#Use resultprop module to get attributes of a search result  
+y1=resultprop.result_dict(xx['ATT_1'])  
+print(y1.long_desc)  
+"""  
+Prints long description for the first page's 10 results for ATT:  
+['Shop deals on unlimited data plans, Internet service, and DIRECTV STREAM. Get 24/7 support, pay your bills & manage your account online.', 'Find the latest AT&T news, including information on new devices, network services, mobile phones and technology.', "Shop AT&T's selection of smartphones, accessories & mobile phone plans. Learn about our best phone deals and wireless plans or get support & pay your bill.", 'Browse available job openings at AT&T', 'Get reliable, fast, and safe Internet from AT&T. View Internet plans, prices and offers available in your area!', 'Find right solution for your business from AT&T. Offering the latest business phones, data plans, IoT, Internet and Networking. Login to AT&T Business and manage your business services.', 'N/A', 'N/A', 'Get the latest in news, entertainment, sports, weather and more on Currently.com. Sign up for free email service with AT&T Yahoo Mail.', 'We create connection – with each other, with what people need to thrive in their everyday lives and with the stories and experiences that matter.']  
+"""
+</code></pre>
