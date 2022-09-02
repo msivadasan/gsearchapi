@@ -53,7 +53,7 @@ with open('rfile.json', 'w') as f:
     json.dump({}, f, indent=4)  
 
 for aa in ("Huawei",  "Lucent", "ATT", "Intel"):  
-    x0.searchdata(aa,1, 'rfile.json')  
+    x0.searchdata(aa, 1, 'rfile.json')  
      
 #Load JSON file into dictionary  
 with open('rfile.json') as f:  
