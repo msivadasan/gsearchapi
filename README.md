@@ -22,7 +22,7 @@ PAGE_NUM indicates which page of the search results is needed. The default is 1,
 
 DATA_FILE_NAME is the name of the .json file where all the search results are to be stored. This can include the path to the desired directory.
 
-Here x1 is a dictionary object that contains all of the raw data (including metadata). The function result_dict in module "searchprop" allows users to extract variables from this raw data.
+Here x1 is a dictionary object that contains all of the raw data (including metadata). The function result_dict in module "resultprop" allows users to extract variables from this raw data.
 * x2=resultprop.result_dict(x1)
 
 Now x2 has a number of useful attributes. Specifically:
